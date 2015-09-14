@@ -1,0 +1,15 @@
+﻿<Window x:Class="Sootd.Categories"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sootd"
+        mc:Ignorable="d"
+        Title="Categories" Height="94.366" Width="241.901" WindowStyle="ToolWindow">
+    <DockPanel>
+        <StackPanel Orientation="Horizontal" Height="25" DockPanel.Dock="Top" VerticalAlignment="Top" Margin="10,20,10,0">
+            <ComboBox x:Name="comboBox" Width="120"></ComboBox>
+            <Button x:Name="button" Content="Select" Width="75" HorizontalAlignment="Right" Margin="10,0,0,0" Click="Select"/>
+        </StackPanel>
+    </DockPanel>
+</Window>

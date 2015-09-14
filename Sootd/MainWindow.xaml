@@ -1,0 +1,28 @@
+﻿<Window x:Class="Sootd.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sootd"
+        mc:Ignorable="d"
+        Title="Question of the day" Height="350" Width="525">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_Actions">
+                <MenuItem Header="_Next question" Click="NextQuestion"/>
+                <MenuItem Header="_Open in browser" Click="OpenBrowser"/>
+                <MenuItem Header="_Exit" Click="Exit" />
+            </MenuItem>
+            <MenuItem Header="_Settings">
+                <MenuItem Header="_Categories" Click="SelectCategory" />
+            </MenuItem>
+        </Menu>
+        <StackPanel DataContext="DataContext">
+            <TextBlock FontSize="48" TextWrapping="Wrap" Margin="10,30,10,0">
+                <Hyperlink Name="hyperlink" RequestNavigate="OpenBrowser">
+                    <Run Name="title" Text="123"/>
+                </Hyperlink>
+            </TextBlock>
+        </StackPanel>
+    </DockPanel>
+</Window>
