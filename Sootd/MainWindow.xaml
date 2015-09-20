@@ -5,24 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sootd"
         mc:Ignorable="d"
-        Title="Question of the day" Height="350" Width="525">
+        Title="Question of the day" Height="386" Width="938">
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_Actions">
-                <MenuItem Header="_Next question" Click="NextQuestion"/>
+                <MenuItem Header="_Next questions" Click="NextQuestion"/>
                 <MenuItem Header="_Open in browser" Click="OpenBrowser"/>
                 <MenuItem Header="_Exit" Click="Exit" />
             </MenuItem>
             <MenuItem Header="_Settings">
                 <MenuItem Header="_Categories" Click="SelectCategory" />
             </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem Header="_About" Click="ShowAbout" />
+            </MenuItem>
         </Menu>
-        <StackPanel DataContext="DataContext">
-            <TextBlock FontSize="48" TextWrapping="Wrap" Margin="10,30,10,0">
-                <Hyperlink Name="hyperlink" RequestNavigate="OpenBrowser">
-                    <Run Name="title" Text="123"/>
-                </Hyperlink>
-            </TextBlock>
+        <StackPanel>
+            <TextBlock HorizontalAlignment="Center" FontSize="26.667" Margin="0,20,0,0"><Run Text="Essay powers "/><Run Text="and assist your colleague!"/></TextBlock>
+
+            <GroupBox x:Name="groupBox" Header="Top Recent Questions for your speciality:" Margin="0,20,0,0" FontSize="18.667">
+                <StackPanel>
+                    <TextBlock FontSize="16" TextWrapping="Wrap" Margin="10,30,10,0">
+                        <Hyperlink Name="hyperlink1" RequestNavigate="OpenBrowser">
+                            <Run Name="title1" Text="1. "/>
+                        </Hyperlink>
+                    </TextBlock>
+                    <TextBlock FontSize="16" TextWrapping="Wrap" Margin="10,30,10,0">
+                        <Hyperlink Name="hyperlink2" RequestNavigate="OpenBrowser">
+                            <Run Name="title2" Text="2. "/>
+                        </Hyperlink>
+                    </TextBlock>
+                    <TextBlock FontSize="16" TextWrapping="Wrap" Margin="10,30,10,0">
+                        <Hyperlink Name="hyperlink3" RequestNavigate="OpenBrowser">
+                            <Run Name="title3" Text="3. "/>
+                        </Hyperlink>
+                    </TextBlock>
+                </StackPanel>
+            </GroupBox>
         </StackPanel>
     </DockPanel>
 </Window>

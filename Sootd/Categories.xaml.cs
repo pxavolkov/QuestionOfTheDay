@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using SoApi;
 
 namespace Sootd
 {
@@ -20,6 +21,7 @@ namespace Sootd
         private void Select(object sender, RoutedEventArgs e)
         {
             config.SelectedCategory = comboBox.SelectedItem.ToString();
+            DialogResult = true;
             Close();
         }
     }

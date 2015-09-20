@@ -9,7 +9,7 @@
     <DockPanel>
         <StackPanel Orientation="Horizontal" Height="25" DockPanel.Dock="Top" VerticalAlignment="Top" Margin="10,20,10,0">
             <ComboBox x:Name="comboBox" Width="120"></ComboBox>
-            <Button x:Name="button" Content="Select" Width="75" HorizontalAlignment="Right" Margin="10,0,0,0" Click="Select"/>
+            <Button x:Name="button" Content="Select" Width="75" HorizontalAlignment="Right" Margin="10,0,0,0" Click="Select" IsDefault="True"/>
         </StackPanel>
     </DockPanel>
 </Window>
