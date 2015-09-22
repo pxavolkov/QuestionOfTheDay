@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Windows;
 using System.Windows.Documents;
 using System.Windows.Forms;
@@ -28,9 +29,11 @@ namespace Sootd
             Update();
             //DataContext = currentQuestion;
 
+            var exeLocation = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            var directory = Path.GetDirectoryName(exeLocation) ?? "";
             notifyIcon = new NotifyIcon
             {
-                Icon = new Icon("icon.ico"),
+                Icon = new Icon(Path.Combine(directory, "icon.ico")),
                 Visible = true
             };
             notifyIcon.DoubleClick += delegate
