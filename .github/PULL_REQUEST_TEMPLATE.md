@@ -1,5 +1,5 @@
 ## Status
-**READY/IN PROGRESS/HOLD**
+**READY/IN PROGRESS**
 
 ## Link to the JIRA issues
 
